@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import TestInfoContext from ".";
 import "./App.css";
 
 function App() {
@@ -7,6 +8,8 @@ function App() {
     setCount(count + 1);
   };
 
+  const testInfo = useContext(TestInfoContext);
+
   return (
     <div className="App">
       <h2>UseState</h2>
@@ -14,6 +17,8 @@ function App() {
       <button onClick={handleCount}>＋</button>
       <hr />
       <h2>useContext</h2>
+      <p>{testInfo.name}</p>
+      <p>{testInfo.age}</p>
     </div>
   );
 }
