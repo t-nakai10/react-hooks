@@ -5,4 +5,5 @@ const Count = ({ name, count }) => {
   return <div>{count}</div>;
 };
 
-export default Count;
+// メモ化, 変化があったときのみ再レンダリング.
+export default React.memo(Count);
