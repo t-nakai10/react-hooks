@@ -5,6 +5,7 @@ import Reducer from "./hooks/Reducer";
 import Ref from "./hooks/Ref";
 import State from "./hooks/State";
 import Memo from "./hooks/Memo";
+import Callback from "./hooks/Callback";
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
 
       <h2>useMemo</h2>
       <Memo />
+
+      <h2>useCallback</h2>
+      <Callback />
     </div>
   );
 }
