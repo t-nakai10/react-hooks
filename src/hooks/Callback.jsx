@@ -6,13 +6,12 @@ const Callback = () => {
   const [count1, setCount1] = useState(0);
   const [count2, setCount2] = useState(0);
 
-  const addCount1 = () => {
+  const addCount1 = useCallback(() => {
     setCount1((prev) => prev + 1);
-  };
-  const addCount2 = () => {
+  }, [count1]);
+  const addCount2 = useCallback(() => {
     setCount2((prev) => prev + 1);
-  };
-
+  }, [count2]);
   return (
     <div>
       <Count name="count1" count={count1} />
